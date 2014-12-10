@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Contribution Pack: Theme Review Team</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body id="pack" class="normal">
+  <header id="top-bar">
+    <h1>Theme Review</h1>
+    <a href="" class="button right">Index</a>
+  </header>
+
+  <main id="main" class="site-main" role="main">
+    <article id="review" class="content-wrapper">
+      <h1>Recommended items</h1>
+      <p>The following are recommended items, themes can't be not approved because of these but they are considered best practice.</p>
+    </article>
+    <article id="code" class="content-wrapper">
+      <h2>Code</h2>
+      <p>Themes may optionally unregister core Widgets.</p>
+    </article>
+    <article id="review" class="content-wrapper">
+      <h1>Core Functionality and Features</h1>
+      <h2>It is recommended to use core markup for the following forms:</h2>
+      <p>
+        <ul>
+          <li>login form</li>
+          <li>search form</li>
+        </ul>
+        <h2>If incorporated, features <b>must </b>support the core WordPress implementation:</h2>
+        <ul>
+          <li><a href="http://codex.wordpress.org/Automatic_Feed_Links"><b>Automatic Feed Links</b></a>:
+            <ul>
+              <li><a href="http://codex.wordpress.org/Function_Reference/add_theme_support#Feed_Links">add_theme_support( 'automatic-feed-links' )</a></li>
+            </ul>
+          </li>
+          <li><a href="http://codex.wordpress.org/Sidebars"><b>Sidebars</b></a>:
+            <ul>
+              <li><a href="http://codex.wordpress.org/Function_Reference/register_sidebar">register_sidebar()</a></li>
+              <li><a href="http://codex.wordpress.org/Function_Reference/dynamic_sidebar">dynamic_sidebar()</a></li>
+              <li>add_action(widgets_init), register_widget() (see <a href="http://codex.wordpress.org/Widgets_API">Widgets API</a>) – (if Theme uses custom widgets)</li>
+            </ul>
+          </li>
+          <li><a href="http://codex.wordpress.org/Navigation_Menus"><b>Navigation Menus</b></a>:
+            <ul>
+              <li><a href="http://codex.wordpress.org/Function_Reference/wp_nav_menu">wp_nav_menu()</a></li>
+              <li><a href="http://codex.wordpress.org/Function_Reference/register_nav_menu">register_nav_menu()</a> or <a href="http://codex.wordpress.org/Function_Reference/register_nav_menus">register_nav_menus()</a> in <i>functions.php</i></li>
+              <li>The following functions may only be used for navigation menus as a callback to wp_nav_menu(), as part of ahas_nav_menu() conditional, or similar: <a href="http://codex.wordpress.org/Function_Reference/wp_list_pages">wp_list_pages</a>, <a href="http://codex.wordpress.org/Template_Tags/wp_list_categories">wp_list_categories</a>, <a href="http://codex.wordpress.org/Function_Reference/wp_page_menu">wp_page_menu</a>, etc.</li>
+            </ul>
+          </li>
+          <li><a href="http://codex.wordpress.org/Post_Thumbnails"><b>Post Thumbnails</b></a>:
+            <ul>
+              <li><a href="http://codex.wordpress.org/Function_Reference/the_post_thumbnail">the_post_thumbnail()</a></li>
+              <li><a href="http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails">add_theme_support('post-thumbnails')</a> in <i>functions.php</i></li>
+            </ul>
+          </li>
+          <li><a href="http://codex.wordpress.org/Custom_Headers"><b>Custom Headers</b></a>:
+            <ul>
+              <li><a href="http://codex.wordpress.org/Function_Reference/add_theme_support#Custom_Header">add_theme_support('custom-header')</a> in <i>functions.php</i></li>
+            </ul>
+          </li>
+          <li><a href="http://codex.wordpress.org/Custom_Backgrounds"><b>Custom Backgrounds</b></a>:
+            <ul>
+              <li><a href="http://codex.wordpress.org/Function_Reference/add_theme_support#Custom_Background">add_theme_support('custom-background')</a> in <i>functions.php</i></li>
+            </ul>
+          </li>
+          <li><a href="http://codex.wordpress.org/Editor_Style"><b>Editor Style</b></a>:
+            <ul>
+              <li><a href="http://codex.wordpress.org/Function_Reference/add_editor_style">add_editor_style()</a></li>
+              <li><i>editor-style.css</i> file</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+    </article>
+    <article id="review" class="content-wrapper">
+      <h1>Documentation</h1>
+      <p>The following are recommendations for documentation:
+        <ul>
+          <li>A readme.txt file can be included.</li>
+          <li>For changes it's great to have a changelog.txt file also.</li>
+          <li>Keep a changelog wherever it is.</li>
+          <li>Anything you add to the theme that WordPress doesn't do such as template files, should be documented.</li>
+          <li>Think of all types of users and make sure they can use the theme.</li>
+          <li>Anything your theme does specially should also be documented.</li>
+          <li>Clearly reference any special modifications in comments within the template and stylesheet files.</li>
+          <li>Add comments to modifications, template sections, and CSS styles, especially those which cross template files.</li>
+          <li>It’s also good practice to let someone know where they can get help for the theme.</li>
+        </ul>
+      </p>
+    </article>
+    <article id="review" class="content-wrapper">
+      <h1>Selling, Themes and Links</h1>
+      <p>
+        <ul>
+          <li>Theme URI is optional. If used, it is required to link to a page with information about the Theme. If a demonstration site is being used, the content must be related to the theme itself and not test data.</li>
+          <li>Author URI is optional. If used it is required to link to an author’s personal website or project/development website.</li>
+        </ul>
+      </p>
+    </article>
+    <article id="review" class="content-wrapper">
+      <h1>Templates</h1>
+      <p>
+        <ul>
+          <li>If used in theme, standard template files are required to be called using the correct template tag:
+            <ul>
+              <li>header.php <i>(via </i><a href="http://codex.wordpress.org/Function_Reference/get_header"><i>get_header()</i></a><i>)</i></li>
+              <li>footer.php <i>(via </i><a href="http://codex.wordpress.org/Function_Reference/get_footer"><i>get_footer()</i></a><i>)</i></li>
+              <li>sidebar.php <i>(via </i><a href="http://codex.wordpress.org/Function_Reference/get_sidebar"><i>get_sidebar()</i></a><i>)</i></li>
+              <li><i>comments.php <i>(via </i><a href="http://codex.wordpress.org/Function_Reference/comments_template"><i>comments_template()</i></a><i>)</i></i></li>
+              <li>searchform.php <i>(via </i><a href="http://codex.wordpress.org/Function_Reference/get_search_form"><i>get_search_form()</i></a><i>)</i></li>
+            </ul>
+          </li>
+          <li>If you include your own theme template file, include documentation as to what it refers to.</li>
+        </ul>
+        <h2>Template Tags</h2>
+        <ul>
+          <li>Themes may modify output via function parameter (body_class( $class )/post_class( $class ))</li>
+          <li>Themes can modify output via filter (body_class/post_class)</li>
+          <li>If you use the relevant templates your theme should include:
+          <ul>
+            <li><a href="http://codex.wordpress.org/Function_Reference/wp_title">wp_title()</a></li>
+            <li><a href="http://codex.wordpress.org/Function_Reference/wp_head">wp_head()</a> – (immediately before &lt;/head&gt;)</li>
+            <li><a href="http://codex.wordpress.org/Template_Tags/body_class">body_class()</a> – (inside &lt;body&gt; tag)</li>
+            <li>$content_width</li>
+            <li><a href="http://codex.wordpress.org/Template_Tags/post_class">post_class()</a></li>
+            <li><a href="http://codex.wordpress.org/Function_Reference/wp_link_pages">wp_link_pages()</a></li>
+            <li><a href="http://codex.wordpress.org/Function_Reference/paginate_comments_links">paginate_comments_links()</a>, or <a href="http://codex.wordpress.org/Function_Reference/previous_comments_link">previous_comments_link()</a>/<a href="http://codex.wordpress.org/Function_Reference/next_comments_link">next_comments_link()</a></li>
+            <li><a href="http://codex.wordpress.org/Function_Reference/posts_nav_link">posts_nav_link()</a>, or <a href="http://codex.wordpress.org/Function_Reference/previous_posts_link">previous_posts_link()</a>/<a href="http://codex.wordpress.org/Function_Reference/next_posts_link">next_posts_link()</a>, or <a href="http://codex.wordpress.org/Function_Reference/paginate_links">paginate_links()</a></li>
+            <li><a href="http://codex.wordpress.org/Function_Reference/wp_footer">wp_footer()</a> – (immediately before &lt;/body&gt;)</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+    <nav id="pagination">
+     <a href="stepnine.html" class="button right">Next step: Let's do a review!</a>
+    </nav>
+  </main>
+  <footer id="colophon" class="site-footer" role="contentinfo">
+  </footer>
+</body>
+</html>
