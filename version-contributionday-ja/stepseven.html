@@ -1,140 +1,137 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" class="">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>コントリビューションパック: テーマレビューチーム</title>
+  <title>Contribution Pack: Theme Review Team</title>
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body id="pack" class="normal">
   <header id="top-bar">
-    <h1>テーマレビュー</h1>
+    <h1>Theme Review</h1>
   </header>
   <main id="main" class="site-main" role="main">
     <article id="review" class="content-wrapper">
-      <h1>必須項目</h1>
+      <h1>必須事項</h1>
       <p>
-        WordPress.org テーマリポジトリにあるテーマには、以下の全ての必須項目を含めなければなりません。
+        テーマが WordPress.org の公式レポジトリに掲載されるためには、以下の必須事項すべてを満たしていなければなりません。
 
-        テーマチェックにあたり、これらのチェックは、テーマチェックプラグインを通してテーマを立ち上げなければならない点を再度確認してください。自動で全ての必須項目のチェックが行われます。</p>
+        これらのチェックをする際は、テーマチェックプラグインの利用も必ずしてください。自動で必須項目のチェックをしてくれます。</p>
     </article>
     <article id="welcome" class="content-wrapper">
       <h3>アクセシビリティ</h3>
       <ul>
-        <li>
-          テーマに 'accessibility-ready' タグが含まれる場合、<a title="Accesibility" href="http://make.wordpress.org/themes/handbook/review/recommended/accesibility/">アクセシビリティの必須項目</a>をすべて含んでいる必要があります。</li>
+        <li>テーマに 'accessibility-ready' がついている場合には、<a title="Accesibility" href="http://make.wordpress.org/themes/handbook/review/recommended/accesibility/">こちらの必須事項</a>も満たしている必要があります。</li>
       </ul>
       <h3>コード</h3>
       <ul>
-        <li>PHP や JavaScript のエラーがでていない。</li>
-        <li>最低でも index.php と style.css がある。</li>
-        <li>有効な DOCTYPE 宣言と language_attributes を含んでいる。</li>
-        <li>すべてサニタイズされている。</li>
-        <li>テーマで使っていないフックを追加したり削除したりしていない。</li>
-        <li>ショートコードを含んでいない。</li>
-        <li>WordPress が生成するこれらの CSS クラスに対応している:
+        <li>PHP、JSのエラーがないこと。</li>
+        <li>少なくともindex.phpとstyle.cssが必ずあること。</li>
+        <li>有効なDOCTYPE宣言がされていること、language_attributesが含まれていること。</li>
+        <li>すべてをサニタイズする。</li>
+        <li>non-presentational hooksを削除したり変更したりしないこと。</li>
+        <li>ショートコードを使ってはいけない。</li>
+        <li>WordPress が生成する以下のcssのクラスをサポートしていること。
           <ul>
             <li>alignleft</li>
             <li>alignright</li>
             <li>wp-caption</li>
             <li>wp-caption-text</li>
             <li>gallery-caption</li>
-            <li>sticky (can be unstyled)</li>
-            <li>bypostauthor (can be unstyled)</li>
+            <li>sticky （スタイリングされていなくてもOK）</li>
+            <li>bypostauthor （スタイリングされていなくてもOK）</li>
           </ul>
         </li>
       </ul>
-      <h3>コアの関数や機能</h3>
+      <h3>コアの関数と機能Core Functionality and Features</h3>
       <ul>
-        <li><a title="WordPress functionality and features" href="http://make.wordpress.org/themes/handbook/review/wordpress-functionality-and-features/">可能なかぎり、 WordPress の関数や機能</a>を使う。</li>
-        <li>Don’t include admin/feature pointers.</li>
-        <li>カスタム投稿タイプ・カスタム分類を含まない。</li>
-        <li>どんな WordPress の機能も、有料でないと使えない範囲を作ってはいけません。</li>
-        <li>管理者ツールバーを使えなくしない。</li>
-        <li>テンプレートまでのパスを取得するのに、 TEMPLATEPATH ではなく <a href="https://developer.wordpress.org/reference/functions/get_template_directory/">get_template_directory()</a> を使う。</li>
-        <li>スタイルシートまでのパスを取得するのに STYLESHEETPATH ではなく <a href="https://developer.wordpress.org/reference/functions/get_stylesheet_directory/">get_stylesheet_directory() </a>を使う。</li>
-        <li>コンテンツを生成するのに、ハードコーディングをしない。
-          代わりに、適切な方法で関数のパラメーター、フィルターとアクションフックを使いましょう。例えば wp_title の値は、フィルタを使って変更しなければなりません。</li>
-        <li>テーマから子テーマが作れるようにする。</li>
-        <li>comments_template() を含める</li>
+        <li><a title="WordPress の関数と機能" href="http://make.wordpress.org/themes/handbook/review/wordpress-functionality-and-features/">WordPress の関数と機能</a>を優先して使うこと。</li>
+        <li>admin/feature pointersを含めないこと。</li>
+        <li>カスタム投稿タイプとカスタム分類を使うことはできない。</li>
+        <li>お金を払わないと、WordPressの機能が使えなくなるようなペイウォールを設けてはいけない。</li>
+        <li>ツールバーを隠してはいけない。</li>
+        <li>（親）テーマへのパスを取得する際、TEMPLATEPATH定数ではなく、<a href="https://developer.wordpress.org/reference/functions/get_template_directory/">get_template_directory()</a>を利用すること。</li>
+        <li>（子）テーマへのパスを取得する際、STYLESHEETPATH定数ではなく、<a href="https://developer.wordpress.org/reference/functions/get_stylesheet_directory/">get_stylesheet_directory() </a>を利用すること。</li>
+        <li>コンテンツを変更するためにハードコーディングをしないこと。代替として、関数の引数や適切なフィルターやアクションを利用すること。たとえば、wp_titleはフィルターを使って変更されるべきです。</li>
+        <li>comments_template()が含まれていること。</li>
       </ul>
       <h3>ドキュメンテーション</h3>
       <ul>
-        <li>あらゆるカスタム機能、オプションや限定事項も、（例えばメニューの構造）説明が必要です。じゅうぶんなドキュメンテーションを提供してください。</li>
+        <li>独自機能、オプション、制限（たとえばメニューに制限があるというような）がある場合には、きちんとした説明が必要です。十分なドキュメンテーションを提供しましょう。</li>
       </ul>
-      <h3>Favicons</h3>
+      <h3>ファビコン</h3>
       <ul>
-        <li>ファビコンを実装する場合、標準では無効にし、ユーザーが上書きできる状態にしてください。</li>
+        <li>ファビコンを利用するのであれば、デフォルトでは無効化しておき、ユーザーが上書きできるようにしておくこと。</li>
       </ul>
       <h3>言語</h3>
       <ul>
-        <li>全てのテーマ中の文章は翻訳可能にしましょう。</li>
-        <li>style.css の中にテキストドメインを含めましょう。</li>
-        <li>単一のユニークなテーマスラッグを使います。スラッグは style.css に書いた通りにします。フレームワークを使っている場合も、２つ以上スラッグを使いません。</li>
-        <li>テキストには何語でも使えます、でもすべてのテキストは同じ言語で書いてください。</li>
+        <li>すべての文字列が翻訳対応していること。</li>
+        <li>style.css にテキストドメインが記述されていること。</li>
+        <li>テキストドメインには、単一のユニークな、style.cssに記述されたテーマスラッグを使うこと。フレームワークを利用する場合、テキストドメインは2つまで利用できます。</li>
+        <li>文字列にはどの言語でも使えるが、すべての文字列がひとつの言語で記述されていること。</li>
       </ul>
       <h3>ライセンス</h3>
       <ul>
-        <li>100% GPL および／または 100% GPL に準ずるライセンスにします。</li>
-        <li>著作権とライセンスを明示します。ライセンスとライセンス uri は style.css のヘッダーに書きます。</li>
-        <li>フォントや画像を含む全てのリソースのライセンスを明示する。</li>
-        <li>全てのコードとデザインは、あなた自身がつくったもの、または法的にあなたのものとなってるものを使ってください。よそからのコピーは認められません。</li>
+        <li>100% GPL または、 100% GPL-compatilbe としてライセンスされていること。</li>
+        <li>著作権とライセンスが明示的に宣言されていること。style.cssのヘッダーに license と license uri が使われていること。</li>
+        <li>フォントや画像など、すべてのリソースのライセンスが宣言されていること。</li>
+        <li>すべてのコードとデザインがあなたものであるか、法的にあなたに属したものであること。デザインのクローンは受け付けられません。</li>
       </ul>
-      <h3>名前</h3>
+      <h3>テーマ名</h3>
       <ul>
-        <li>テーマの名前に「WordPress」を含めないでください。</li>
-        <li>あらゆるテキストの中で “WordPress” を正しい綴りで書いてください: スペースを入れないことと、 W と P が大文字です。</li>
+        <li>テーマの名前に、WordPress、Themeを利用することはできません。</li>
+        <li>"WordPress" のスペルを正確に。スペースを空けない、WとPが大文字です。</li>
       </ul>
       <h3>オプションと設定</h3>
       <ul>
-        <li>オプションは単一の配列に保存します。</li>
-        <li><a href="https://make.wordpress.org/themes/2014/07/09/using-sane-defaults-in-themes/">sane defaults</a>を使って、標準設定のときはデータベースに書き込まない。</li>
-        <li>Use <i>edit_theme_options</i> capability for <i>add_theme_page()</i>, rather than rely on a role (e.g. “administrator”), or a different capability (e.g. “edit_themes”, “manage_options”) for the capability to add the settings page.</li>
-        <li>テーマオプションのページを使う場合、「外観」メニューのなかに追加してください。</li>
-        <li>テーマオプションの実装には、 Settings API またはテーマカスタマイザーのいずれかを使ってください。</li>
-        <li>すべてのオプション、カスタム関数、カスタム変数、カスタム定数は、テーマスラッグをプレフィクスしてください。</li>
+        <li>オプションはひとつの配列に格納して保存すること。</li>
+        <li><a href="https://make.wordpress.org/themes/2014/07/09/using-sane-defaults-in-themes/">実質のあるデフォルトを利用する</a>こと。デフォルトの設定値をデータベースに保存しないこと。Use <a href="https://make.wordpress.org/themes/2014/07/09/using-sane-defaults-in-themes/">sane defaults</a> and must not write default setting values to the database.（訳注：sane defaultの訳にぴったり来るのがないので英語残し）</li>
+        <li><i>add_theme_page()</i> の権限には <i>edit_theme_options</i> を利用して、 administrator などのロールを使わない。また、 <i>edit_themes</i>や <i>manage_options</i> などの他の権限を利用しない。</li>
+        <li>オプションページを利用する場合には、「外観」の配下に設置すること。</li>
+        <li>テーマオプションを活用する場合には、 Settings API か Customizer を利用すること。</li>
+        <li>すべてのオプション名、独自の関数名、独自の変数名、独自の定数名には、テーマスラッグのプレフィックスをつけること。</li>
       </ul>
       <h3>プラグイン</h3>
       <ul>
-        <li>プラグインは同梱しないでください。テーマは、プラグインのおすすめはしてもよいですが、テーマのコードに含めないでください。</li>
-        <li>プラグインの領域と考えられることを、テーマでやらないでください。</li>
+        <li>プラグインを含まないこと。テーマ内でプラグインの利用をおすすめすることはできますが、テーマに含めることはできません。</li>
+        <li>プラグインテリトリーとして考えられていることをしないこと。</li>
       </ul>
       <h3>スクリーンショット</h3>
       <ul>
-        <li>Screenshot.png は、実際の標準設定のときのテーマにしてください。ロゴやモックアップではありません。</li>
-        <li>screenshot.png は 880x 660px よりも大きくしないでください。</li>
+        <li>Screenshot.png は、ロゴやモックアップではなく、デフォルトの設定で有効化した時の、実際のテーマのものを使うこと。</li>
+        <li>screenshot.png は、880 x 660px よりも大きくしない。</li>
       </ul>
       <h3>セキュリティとプライバシー</h3>
       <ul>
-        <li>ユーザーの同意なしに、自宅に電話しないでください。 詳しくは<a title="Security and Privacy" href="http://make.wordpress.org/themes/handbook/review/recommended/security-and-privacy/">セキュリティについて</a>をお読み下さい。</li>
-        <li>ユーザーのデータをとる場合は、かならずテーマオプションで設定できるようにしてください。デフォルトはかならず無効にしてください。</li>
-        <li>untrusted データは、データベースに入れる前に検証、サニタイズしてください。すべての untrusted データは、出力される前にエスケープしてください。（<a href="https://codex.wordpress.org/Data_Validation">データの検証</a>をご覧ください。）</li>
-        <li>テキストの入力には esc_attr() を使い、テキストエリアには esc_html() を使ってください。</li>
+        <li>ユーザーの同意なしに、データを送信しないこと（Don't phone home without informed user consent.）。追加情報は、<a title="Security and Privacy" href="http://make.wordpress.org/themes/handbook/review/recommended/security-and-privacy/">セキュリティ</a>ページに有ります。.</li>
+        <li>ユーザーのデータを収集する場合には、すべてオプトインとし、デフォルトで無効化されているオプションを設けること。</li>
+        <li>データベースに保存される信頼されないすべてのデータのバリデーションとサニタイズを実施していること。出力されるすべての信頼されないデータは、出力前にエスケープされていること。（<a href="https://codex.wordpress.org/Data_Validation">Data Validation</a>のページも見てください）</li>
+        <li>テキストフィールド内の値には esc_attr() を、テキストエリア内の値には esc_html() を利用すること。</li>
       </ul>
-      <h3>販売、著者クレジット、リンク</h3>
+      <h3>販売、クレジット、リンク</h3>
       <ul>
-        <li>テーマ販売者が WordPress.org レポジトリにテーマを登録する場合、ほかに販売しているテーマも GPL でなければなりません。</li>
-        <li>テーマの広告をフッターのリンクに追加する場合、１つだけにしないといけません。</li>
+        <li>テーマ販売をしている場合には、それらのテーマが GPL で販売されている必要があります。でなければ、 WordPress.org の公式レポジトリに（訳注：無料版の）テーマを掲載できません。</li>
+        <li>フッターにクレジットリンクを載せる場合には、ひとつだけ。</li>
       </ul>
       <h3>スタイルシートとスクリプト</h3>
       <ul>
-        <li>スクリプト、スタイルとファビコンは、ブラウザ対策のため以外ではハードコーディングしないでください。ページ読み込みが終わったあとに動くべきです。</li>
-        <li>解析やトラッキングをしない。</li>
-        <li>元のファイルを提供していない場合、スクリプトやその他のファイル難読化をしないでください。</li>
-        <li>コアに入ってるスクリプトがある場合はそちらを使って、独自のバージョンのものを使わないでください。例えば jQuery　など。</li>
-        <li>全てのスクリプトとリソースは直リンクせず、同梱してください。ただし Google ライブラリーは除きます。</li>
-        <li>もし style.css にタグを書いた場合、テーマはそのタグが意味するような仕様になってないといけません。例えばカスタム背景やヘッダー。</li>
+        <li>スクリプト、スタイルシート、ファビコンのハードコーディングは、ブラウザ対策の場合を除き、ハードコーディングされてはならず、すべてenqueueされる必要があります。</li>
+        <li>解析やトラッキングは許可されません。</li>
+        <li>ミニファイされたスクリプトを含める場合には、オリジナルのファイルも同梱しなければなりません。</li>
+        <li>スクリプトは、自分のバージョンを使うのではなく、コアにバンドルされたものを使わなければなりません。たとえばjQueryなど。</li>
+        <li>スクリプトとスタイルは、直リンクではなくテーマ内に同梱しなければなりません。例外はGoogleのライブラリです。</li>
+        <li>スタイルシートでタグが利用されている場合、その機能を有していなければならず、タグの意味するところをきちんと満たしていなければなりません。たとえば、カスタム背景やカスタムヘッダーなど。</li>
       </ul>
       <h3>テンプレート</h3>
       <ul>
-        <li>テンプレートを使う場合、カスタムテンプレートファイルは <a href="https://developer.wordpress.org/reference/functions/get_template_part/">get_template_part()</a> または locate_template() を使って呼び出します。</li>
-        <li>特定のものがすでに使われている場合、いくつかの <a title="Templates" href="http://make.wordpress.org/themes/handbook/review/recommended/templates/">テンプレート特有のこと</a> を考慮すべきです。</li>
-        <li>bloginfo() と同等のものは、テンプレートタグ *_url() を使いましょう。</li>
+        <li>テープレートをを利用する際、カスタムテンプレートは <a href="https://developer.wordpress.org/reference/functions/get_template_part/">get_template_part()</a> か locate_template() によって読み込むこと。</li>
+        <li>There are several <a title="Templates" href="http://make.wordpress.org/themes/handbook/review/recommended/templates/">template specific things</a> you should consider when certain ones are being used.</li>
+        <li>*_url() テンプレートタグを使い、対応する bloginfo() 系のものを使わないこと。</li>
       </ul>
-      <em><strong>It's worth noting we are working to automate a lot of the above requirements.</strong></em>
+      <em><strong>以上の必須項目の多くについて自動化を進めていることを付記しておきます。</strong></em>
     </article>
 
     <nav id="pagination">
-      <a href="stepeight.html" class="button right">Next step: Recommended items</a>
+      <a href="stepeight.html" class="button right">次のステップ： 推奨事項</a>
     </nav>
 
   </main>
