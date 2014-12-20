@@ -2,35 +2,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Contribution Pack: Theme Review Team</title>
+  <title>コントリビューションパック: テーマレビューチーム</title>
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body id="pack" class="normal">
   <header id="top-bar">
-    <h1>Theme Review</h1>
+    <h1>テーマレビュー</h1>
   </header>
   <main id="main" class="site-main" role="main">
     <article id="review" class="content-wrapper">
-      <h1>Required items</h1>
+      <h1>必須項目</h1>
       <p>
-        A theme must meet all of the following requirements to be included in the WordPress.org theme repository.
+        WordPress.org テーマリポジトリにあるテーマには、以下の全ての必須項目を含めなければなりません。
 
-        Along with these checks you should also make sure you run the theme through the theme check plugin. It automatically checks for all the required items.</p>
+        テーマチェックにあたり、これらのチェックは、テーマチェックプラグインを通してテーマを立ち上げなければならない点を再度確認してください。自動で全ての必須項目のチェックが行われます。</p>
     </article>
     <article id="welcome" class="content-wrapper">
-      <h3>Accessibility</h3>
+      <h3>アクセシビリティ</h3>
       <ul>
-        <li>If the theme has the tag 'accessibility-ready' then it needs to meet <a title="Accesibility" href="http://make.wordpress.org/themes/handbook/review/recommended/accesibility/">these requirements</a>.</li>
+        <li>
+          テーマに 'accessibility-ready' タグが含まれる場合、<a title="Accesibility" href="http://make.wordpress.org/themes/handbook/review/recommended/accesibility/">アクセシビリティの必須項目</a>をすべて含んでいる必要があります。</li>
       </ul>
-      <h3>Code</h3>
+      <h3>コード</h3>
       <ul>
-        <li>No PHP or JS errors.</li>
-        <li>Include at least index.php and style.css.</li>
-        <li>Have a valid DOCTYPE declaration and include language_attributes.</li>
-        <li>Sanitise everything.</li>
-        <li>No removing or modifying non-presentational hooks.</li>
-        <li>No shortcodes are allowed.</li>
-        <li>Support the following WordPress-generated CSS classes:
+        <li>PHP や JavaScript のエラーがでていない。</li>
+        <li>最低でも index.php と style.css がある。</li>
+        <li>有効な DOCTYPE 宣言と language_attributes を含んでいる。</li>
+        <li>すべてサニタイズされている。 everything.</li>
+        <li>テーマで使っていないフックを追加したり削除したりしていない。</li>
+        <li>ショートコードを含んでいない。</li>
+        <li>WordPress が生成するこれらの CSS クラスに対応している:
           <ul>
             <li>alignleft</li>
             <li>alignright</li>
@@ -42,42 +43,43 @@
           </ul>
         </li>
       </ul>
-      <h3>Core Functionality and Features</h3>
+      <h3>コアの関数や機能</h3>
       <ul>
-        <li>Use <a title="WordPress functionality and features" href="http://make.wordpress.org/themes/handbook/review/wordpress-functionality-and-features/">WordPress functionality and features first, if available</a>.</li>
+        <li><a title="WordPress functionality and features" href="http://make.wordpress.org/themes/handbook/review/wordpress-functionality-and-features/">可能なかぎり、 WordPress の関数や機能</a>を使う。</li>
         <li>Don’t include admin/feature pointers.</li>
-        <li>No custom post types and no custom taxonomies.</li>
-        <li>No pay wall restricting any WordPress feature.</li>
-        <li>No disabling of the admin tool bar.</li>
-        <li>Use <a href="https://developer.wordpress.org/reference/functions/get_template_directory/">get_template_directory()</a> rather than TEMPLATEPATH to return the template path.</li>
-        <li>Use <a href="https://developer.wordpress.org/reference/functions/get_stylesheet_directory/">get_stylesheet_directory() </a>rather than STYLESHEETPATH to return the stylesheet path.</li>
-        <li>Avoid hard coding to modify content. Instead, use function parameters, filters and action hooks where appropriate. For example wp_title should be modified using a filter.</li>
-        <li>Able to have child themes made from them.</li>
-        <li>Include comments_template().</li>
+        <li>カスタム投稿タイプ・カスタム分類を含まない。</li>
+        <li>どんな WordPress の機能も、有料でないと使えない範囲を作ってはいけません。</li>
+        <li>管理者ツールバーを使えなくしない。</li>
+        <li>テンプレートまでのパスを取得するのに、 TEMPLATEPATH ではなく <a href="https://developer.wordpress.org/reference/functions/get_template_directory/">get_template_directory()</a> を使う。</li>
+        <li>スタイルシートまでのパスを取得するのに STYLESHEETPATH ではなく <a href="https://developer.wordpress.org/reference/functions/get_stylesheet_directory/">get_stylesheet_directory() </a>を使う。</li>
+        <li>コンテンツを生成するのに、ハードコーディングをしない。
+          代わりに、適切な方法で関数のパラメーター、フィルターとアクションフックを使いましょう。例えば wp_title の値は、フィルタを使って変更しなければなりません。</li>
+        <li>テーマから子テーマが作れるようにする。</li>
+        <li>comments_template() を含める</li>
       </ul>
-      <h3>Documentation</h3>
+      <h3>ドキュメンテーション</h3>
       <ul>
-        <li>Any custom features, options or any limitations (for example menu restrictions), should be explained. Enough documentation should be provided.</li>
+        <li>あらゆるカスタム機能、オプションや限定事項も、（例えばメニューの構造）説明が必要です。じゅうぶんなドキュメンテーションを提供してください。</li>
       </ul>
       <h3>Favicons</h3>
       <ul>
-        <li>If implemented, disable favicons by default and have the ability for users to over-ride.</li>
+        <li>ファビコンを実装する場合、標準では無効にし、ユーザーが上書きできる状態にしてください。</li>
       </ul>
-      <h3>Language</h3>
+      <h3>言語</h3>
       <ul>
-        <li>All theme text strings are to be translatable.</li>
-        <li>Include a text domains in style.css</li>
-        <li>Use a single unique theme slug – as the theme slug appears in style.css. If it uses a framework then no more than 2 unique slugs.</li>
-        <li>Can use any language for text, but only use the same one for all text.</li>
+        <li>全てのテーマ中の文章は翻訳可能にしましょう。</li>
+        <li>style.css の中にテキストドメインを含めましょう。</li>
+        <li>単一のユニークなテーマスラッグを使います。スラッグは style.css に書いた通りにします。フレームワークを使っている場合も、２つ以上スラッグを使いません。</li>
+        <li>テキストには何語でも使えます、でもすべてのテキストは同じ言語で書いてください。</li>
       </ul>
-      <h3>Licensing</h3>
+      <h3>ライセンス</h3>
       <ul>
-        <li>Be 100% GPL and/or 100% GPL-compatible licensed.</li>
-        <li>Declare copyright and license explicitly. Use the license and license uri header slugs to style.css.</li>
-        <li>Declare licenses of any resources included such as fonts or images.</li>
-        <li>All code and design should be your own or legally yours. Cloning of designs is not acceptable.</li>
+        <li>100% GPL および／または 100% GPL に準ずるライセンスにします。</li>
+        <li>著作権とライセンスを明示します。ライセンスとライセンス uri は style.css のヘッダーに書きます。</li>
+        <li>フォントや画像を含む全てのリソースのライセンスを明示する。</li>
+        <li>全てのコードとデザインは、あなた自身がつくったもの、または法的にあなたのものとなってるものを使ってください。よそからのコピーは認められません。</li>
       </ul>
-      <h3>Naming</h3>
+      <h3>名前</h3>
       <ul>
         <li>Theme names must not use: WordPress, Theme.</li>
         <li>Spell “WordPress” correctly in all public facing text: all one word, with both an uppercase W and P.</li>
