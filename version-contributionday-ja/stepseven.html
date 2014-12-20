@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>コントリビューションパック: テーマレビューチーム</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body id="pack" class="normal">
+  <header id="top-bar">
+    <h1>テーマレビュー</h1>
+  </header>
+  <main id="main" class="site-main" role="main">
+    <article id="review" class="content-wrapper">
+      <h1>必須項目</h1>
+      <p>
+        WordPress.org テーマリポジトリにあるテーマには、以下の全ての必須項目を含めなければなりません。
+
+        テーマチェックにあたり、これらのチェックは、テーマチェックプラグインを通してテーマを立ち上げなければならない点を再度確認してください。自動で全ての必須項目のチェックが行われます。</p>
+    </article>
+    <article id="welcome" class="content-wrapper">
+      <h3>アクセシビリティ</h3>
+      <ul>
+        <li>
+          テーマに 'accessibility-ready' タグが含まれる場合、<a title="Accesibility" href="http://make.wordpress.org/themes/handbook/review/recommended/accesibility/">アクセシビリティの必須項目</a>をすべて含んでいる必要があります。</li>
+      </ul>
+      <h3>コード</h3>
+      <ul>
+        <li>PHP や JavaScript のエラーがでていない。</li>
+        <li>最低でも index.php と style.css がある。</li>
+        <li>有効な DOCTYPE 宣言と language_attributes を含んでいる。</li>
+        <li>すべてサニタイズされている。 everything.</li>
+        <li>テーマで使っていないフックを追加したり削除したりしていない。</li>
+        <li>ショートコードを含んでいない。</li>
+        <li>WordPress が生成するこれらの CSS クラスに対応している:
+          <ul>
+            <li>alignleft</li>
+            <li>alignright</li>
+            <li>wp-caption</li>
+            <li>wp-caption-text</li>
+            <li>gallery-caption</li>
+            <li>sticky (can be unstyled)</li>
+            <li>bypostauthor (can be unstyled)</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>コアの関数や機能</h3>
+      <ul>
+        <li><a title="WordPress functionality and features" href="http://make.wordpress.org/themes/handbook/review/wordpress-functionality-and-features/">可能なかぎり、 WordPress の関数や機能</a>を使う。</li>
+        <li>Don’t include admin/feature pointers.</li>
+        <li>カスタム投稿タイプ・カスタム分類を含まない。</li>
+        <li>どんな WordPress の機能も、有料でないと使えない範囲を作ってはいけません。</li>
+        <li>管理者ツールバーを使えなくしない。</li>
+        <li>テンプレートまでのパスを取得するのに、 TEMPLATEPATH ではなく <a href="https://developer.wordpress.org/reference/functions/get_template_directory/">get_template_directory()</a> を使う。</li>
+        <li>スタイルシートまでのパスを取得するのに STYLESHEETPATH ではなく <a href="https://developer.wordpress.org/reference/functions/get_stylesheet_directory/">get_stylesheet_directory() </a>を使う。</li>
+        <li>コンテンツを生成するのに、ハードコーディングをしない。
+          代わりに、適切な方法で関数のパラメーター、フィルターとアクションフックを使いましょう。例えば wp_title の値は、フィルタを使って変更しなければなりません。</li>
+        <li>テーマから子テーマが作れるようにする。</li>
+        <li>comments_template() を含める</li>
+      </ul>
+      <h3>ドキュメンテーション</h3>
+      <ul>
+        <li>あらゆるカスタム機能、オプションや限定事項も、（例えばメニューの構造）説明が必要です。じゅうぶんなドキュメンテーションを提供してください。</li>
+      </ul>
+      <h3>Favicons</h3>
+      <ul>
+        <li>ファビコンを実装する場合、標準では無効にし、ユーザーが上書きできる状態にしてください。</li>
+      </ul>
+      <h3>言語</h3>
+      <ul>
+        <li>全てのテーマ中の文章は翻訳可能にしましょう。</li>
+        <li>style.css の中にテキストドメインを含めましょう。</li>
+        <li>単一のユニークなテーマスラッグを使います。スラッグは style.css に書いた通りにします。フレームワークを使っている場合も、２つ以上スラッグを使いません。</li>
+        <li>テキストには何語でも使えます、でもすべてのテキストは同じ言語で書いてください。</li>
+      </ul>
+      <h3>ライセンス</h3>
+      <ul>
+        <li>100% GPL および／または 100% GPL に準ずるライセンスにします。</li>
+        <li>著作権とライセンスを明示します。ライセンスとライセンス uri は style.css のヘッダーに書きます。</li>
+        <li>フォントや画像を含む全てのリソースのライセンスを明示する。</li>
+        <li>全てのコードとデザインは、あなた自身がつくったもの、または法的にあなたのものとなってるものを使ってください。よそからのコピーは認められません。</li>
+      </ul>
+      <h3>名前</h3>
+      <ul>
+        <li>Theme names must not use: WordPress, Theme.</li>
+        <li>Spell “WordPress” correctly in all public facing text: all one word, with both an uppercase W and P.</li>
+      </ul>
+      <h3>Options and Settings</h3>
+      <ul>
+        <li>Save options in a single array.</li>
+        <li>Use <a href="https://make.wordpress.org/themes/2014/07/09/using-sane-defaults-in-themes/">sane defaults</a> and must not write default setting values to the database.</li>
+        <li>Use <i>edit_theme_options</i> capability for <i>add_theme_page()</i>, rather than rely on a role (e.g. “administrator”), or a different capability (e.g. “edit_themes”, “manage_options”) for the capability to add the settings page.</li>
+        <li>If using a theme options page, add it to the 'Appearance' menu.</li>
+        <li>Use either the Settings API or the Customizer for implementing theme options.</li>
+        <li>Prefix all options, custom functions, custom variables and custom constants with the theme-slug.</li>
+      </ul>
+      <h3>Plugins</h3>
+      <ul>
+        <li>Don't include any plugins. A theme can recommend plugins but not include those plugins in the theme code.</li>
+        <li>Don't do things in a theme considered plugin territory.</li>
+      </ul>
+      <h3>Screenshot</h3>
+      <ul>
+        <li>Screenshot.png should be of the actual theme as it appears with default options, not a logo or mockup.</li>
+        <li>The screenshot.png should be no bigger than 880x 660px.</li>
+      </ul>
+      <h3>Security and Privacy</h3>
+      <ul>
+        <li>Don't phone home without informed user consent. Find out more about <a title="Security and Privacy" href="http://make.wordpress.org/themes/handbook/review/recommended/security-and-privacy/">security</a> here.</li>
+        <li>Make any collection of user data ‘opt-in’ only and have a theme option that is set to disabled by default.</li>
+        <li>Make any collection of user data ‘opt-in’ only and have a theme option that is set to disabled by default.Validate and sanitze untrusted data before entering into the database. All untrusted data should be escaped before output. (see: <a href="https://codex.wordpress.org/Data_Validation">Data Validation</a>)</li>
+        <li>Use esc_attr() for text inputs and esc_html() for textareas.</li>
+      </ul>
+      <h3>Selling, credits and links</h3>
+      <ul>
+        <li>If you are a themeshop you should be selling under GPL to be in the WordPress.org repo.</li>
+        <li>If the theme adds a footer credit link, there should only be one.</li>
+      </ul>
+      <h3>Stylesheets and Scripts</h3>
+      <ul>
+        <li>No hard coding of scripts, styles and Favicons unless a browser workaround script. Everything should be enqueued.</li>
+        <li>No analytics or tracking.</li>
+        <li>No minification of scripts or files unless provide original files.</li>
+        <li>Required to use core-bundled scripts rather than including their own version of that script. For example jQuery.</li>
+        <li>Include all scripts and resources it uses rather than hot-linking. The exception to this is Google libraries.</li>
+        <li>If a tag is used in style.css the theme should support that feature or adhere to what that tag stands for. For example custom background or header.</li>
+      </ul>
+      <h3>Templates</h3>
+      <ul>
+        <li>If using templates, custom template files should be called using <a href="https://developer.wordpress.org/reference/functions/get_template_part/">get_template_part()</a> or locate_template().</li>
+        <li>There are several <a title="Templates" href="http://make.wordpress.org/themes/handbook/review/recommended/templates/">template specific things</a> you should consider when certain ones are being used.</li>
+        <li>You should use *_url() template tags, rather than bloginfo() equivalents.</li>
+      </ul>
+      <em><strong>It's worth noting we are working to automate a lot of the above requirements.</strong></em>
+    </article>
+
+    <nav id="pagination">
+      <a href="stepeight.html" class="button right">Next step: Recommended items</a>
+    </nav>
+
+  </main>
+  <footer id="colophon" class="site-footer" role="contentinfo">
+  </footer>
+</body>
+</html>
