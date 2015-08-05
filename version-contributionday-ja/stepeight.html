@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" class="">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Contribution Pack: Theme Review Team</title>
@@ -13,59 +13,59 @@
 
   <main id="main" class="site-main" role="main">
     <article id="review" class="content-wrapper">
-      <h1>Recommended items</h1>
-      <p>The following are recommended items, themes can't be not approved because of these but they are considered best practice.</p>
+      <h1>推奨事項</h1>
+      <p>以下は推奨事項です。以下のものが満たされていないからといってテーマが承認されないということはあってはなりませんが、ベストプラクティスとして考えられています。</p>
     </article>
     <article id="code" class="content-wrapper">
       <h2>Code</h2>
-      <p>Themes may optionally unregister core Widgets.</p>
+      <p>テーマはコアのウィジェットを登録解除することができます。</p>
     </article>
     <article id="review" class="content-wrapper">
-      <h1>Core Functionality and Features</h1>
-      <h2>It is recommended to use core markup for the following forms:</h2>
+      <h1>コアの関数や機能</h1>
+      <h2>以下のフォームについてはコアのマークアップを利用することが推奨されます。</h2>
       <p>
         <ul>
-          <li>login form</li>
-          <li>search form</li>
+          <li>ログインフォーム</li>
+          <li>検索フォーム</li>
         </ul>
-        <h2>If incorporated, features <b>must </b>support the core WordPress implementation:</h2>
+        <h2>以下の機能を組み込むのであれば、WordPressに含まれるものを利用しなければなりません。</h2>
         <ul>
-          <li><a href="http://codex.wordpress.org/Automatic_Feed_Links"><b>Automatic Feed Links</b></a>:
+          <li><a href="http://codex.wordpress.org/Automatic_Feed_Links"><b>フィードリンクの自動出力</b></a>:
             <ul>
               <li><a href="http://codex.wordpress.org/Function_Reference/add_theme_support#Feed_Links">add_theme_support( 'automatic-feed-links' )</a></li>
             </ul>
           </li>
-          <li><a href="http://codex.wordpress.org/Sidebars"><b>Sidebars</b></a>:
+          <li><a href="http://codex.wordpress.org/Sidebars"><b>サイドバー</b></a>：
             <ul>
               <li><a href="http://codex.wordpress.org/Function_Reference/register_sidebar">register_sidebar()</a></li>
               <li><a href="http://codex.wordpress.org/Function_Reference/dynamic_sidebar">dynamic_sidebar()</a></li>
-              <li>add_action(widgets_init), register_widget() (see <a href="http://codex.wordpress.org/Widgets_API">Widgets API</a>) – (if Theme uses custom widgets)</li>
+              <li>add_action(widgets_init), register_widget() (<a href="http://codex.wordpress.org/Widgets_API">Widgets API</a> も見てください) – (カスタムウィジェットを利用するのであれば)</li>
             </ul>
           </li>
-          <li><a href="http://codex.wordpress.org/Navigation_Menus"><b>Navigation Menus</b></a>:
+          <li><a href="http://codex.wordpress.org/Navigation_Menus"><b>ナビゲーションメニュー</b></a>:
             <ul>
               <li><a href="http://codex.wordpress.org/Function_Reference/wp_nav_menu">wp_nav_menu()</a></li>
-              <li><a href="http://codex.wordpress.org/Function_Reference/register_nav_menu">register_nav_menu()</a> or <a href="http://codex.wordpress.org/Function_Reference/register_nav_menus">register_nav_menus()</a> in <i>functions.php</i></li>
-              <li>The following functions may only be used for navigation menus as a callback to wp_nav_menu(), as part of ahas_nav_menu() conditional, or similar: <a href="http://codex.wordpress.org/Function_Reference/wp_list_pages">wp_list_pages</a>, <a href="http://codex.wordpress.org/Template_Tags/wp_list_categories">wp_list_categories</a>, <a href="http://codex.wordpress.org/Function_Reference/wp_page_menu">wp_page_menu</a>, etc.</li>
+              <li><a href="http://codex.wordpress.org/Function_Reference/register_nav_menu">register_nav_menu()</a> または <a href="http://codex.wordpress.org/Function_Reference/register_nav_menus">register_nav_menus()</a> を <i>functions.php</i> で。</li>
+              <li>次の関数は、ナビゲーションメニューのために、 wp_nav_menu() のコールバックとして、 has_nav_menu() の条件分岐として、あるいは類似の形でのみ使うことができます。： <a href="http://codex.wordpress.org/Function_Reference/wp_list_pages">wp_list_pages</a>, <a href="http://codex.wordpress.org/Template_Tags/wp_list_categories">wp_list_categories</a>, <a href="http://codex.wordpress.org/Function_Reference/wp_page_menu">wp_page_menu</a> など。</li>
             </ul>
           </li>
-          <li><a href="http://codex.wordpress.org/Post_Thumbnails"><b>Post Thumbnails</b></a>:
+          <li><a href="http://codex.wordpress.org/Post_Thumbnails"><b>アイキャッチ画像 Post Thumbnails</b></a>:
             <ul>
               <li><a href="http://codex.wordpress.org/Function_Reference/the_post_thumbnail">the_post_thumbnail()</a></li>
               <li><a href="http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails">add_theme_support('post-thumbnails')</a> in <i>functions.php</i></li>
             </ul>
           </li>
-          <li><a href="http://codex.wordpress.org/Custom_Headers"><b>Custom Headers</b></a>:
+          <li><a href="http://codex.wordpress.org/Custom_Headers"><b>カスタムヘッダー</b></a>:
             <ul>
               <li><a href="http://codex.wordpress.org/Function_Reference/add_theme_support#Custom_Header">add_theme_support('custom-header')</a> in <i>functions.php</i></li>
             </ul>
           </li>
-          <li><a href="http://codex.wordpress.org/Custom_Backgrounds"><b>Custom Backgrounds</b></a>:
+          <li><a href="http://codex.wordpress.org/Custom_Backgrounds"><b>カスタム背景</b></a>:
             <ul>
               <li><a href="http://codex.wordpress.org/Function_Reference/add_theme_support#Custom_Background">add_theme_support('custom-background')</a> in <i>functions.php</i></li>
             </ul>
           </li>
-          <li><a href="http://codex.wordpress.org/Editor_Style"><b>Editor Style</b></a>:
+          <li><a href="http://codex.wordpress.org/Editor_Style"><b>エディタースタイル</b></a>:
             <ul>
               <li><a href="http://codex.wordpress.org/Function_Reference/add_editor_style">add_editor_style()</a></li>
               <li><i>editor-style.css</i> file</li>
@@ -75,66 +75,66 @@
       </p>
     </article>
     <article id="review" class="content-wrapper">
-      <h1>Documentation</h1>
-      <p>The following are recommendations for documentation:
+      <h1>ドキュメンテーション</h1>
+      <p>以下はドキュメンテーションについての推奨事項です。
         <ul>
-          <li>A readme.txt file can be included.</li>
-          <li>For changes it's great to have a changelog.txt file also.</li>
-          <li>Keep a changelog wherever it is.</li>
-          <li>Anything you add to the theme that WordPress doesn't do such as template files, should be documented.</li>
-          <li>Think of all types of users and make sure they can use the theme.</li>
-          <li>Anything your theme does specially should also be documented.</li>
-          <li>Clearly reference any special modifications in comments within the template and stylesheet files.</li>
-          <li>Add comments to modifications, template sections, and CSS styles, especially those which cross template files.</li>
-          <li>It’s also good practice to let someone know where they can get help for the theme.</li>
+          <li>readme.txt を含めることができます。</li>
+          <li>変更に関しては changelog.txt も同梱するととてもよいです。</li>
+          <li>どこでもよいので、変更履歴を残しましょう。</li>
+          <li>WordPressが標準で行わないことを追加するのであれば、どんなものであれドキュメントしてください。</li>
+          <li>すべての種類のユーザーについて考えて、誰にでも使えるようにしてください。</li>
+          <li>特別なことをやっている場合にはどんなことでもドキュメントしてください。</li>
+          <li>テンプレートやCSSに行ったことは分かりやすく言及してください。</li>
+          <li>変更、テンプレートセクション、CSSスタイルにコメントを付けます。特にテンプレートをまたぐような時は。</li>
+          <li>テーマについてのサポートをどこで得られるのかを書いておくこともよいです。</li>
         </ul>
       </p>
     </article>
     <article id="review" class="content-wrapper">
-      <h1>Selling, Themes and Links</h1>
+      <h1>販売、テーマ、リンク</h1>
       <p>
         <ul>
-          <li>Theme URI is optional. If used, it is required to link to a page with information about the Theme. If a demonstration site is being used, the content must be related to the theme itself and not test data.</li>
-          <li>Author URI is optional. If used it is required to link to an author’s personal website or project/development website.</li>
+          <li>Theme URI はオプションです。使うのであればテーマについての情報があるサイトであることが必須です。でもサイトであっても、コンテンツはテーマについてのことでなければならず、テストデータではいけません。</li>
+          <li>Author URI はオプションです。使うのであれば、開発者の個人のウェブサイトか、プロジェクト／開発についてページである必要があります。</li>
         </ul>
       </p>
     </article>
     <article id="review" class="content-wrapper">
-      <h1>Templates</h1>
+      <h1>テンプレート</h1>
       <p>
         <ul>
-          <li>If used in theme, standard template files are required to be called using the correct template tag:
+          <li>テーマ内で使われる場合、標準のテンプレートファイルについては正しいテンプレートタグを使って呼び出す必要があります。
             <ul>
-              <li>header.php <i>(via </i><a href="http://codex.wordpress.org/Function_Reference/get_header"><i>get_header()</i></a><i>)</i></li>
-              <li>footer.php <i>(via </i><a href="http://codex.wordpress.org/Function_Reference/get_footer"><i>get_footer()</i></a><i>)</i></li>
-              <li>sidebar.php <i>(via </i><a href="http://codex.wordpress.org/Function_Reference/get_sidebar"><i>get_sidebar()</i></a><i>)</i></li>
-              <li><i>comments.php <i>(via </i><a href="http://codex.wordpress.org/Function_Reference/comments_template"><i>comments_template()</i></a><i>)</i></i></li>
-              <li>searchform.php <i>(via </i><a href="http://codex.wordpress.org/Function_Reference/get_search_form"><i>get_search_form()</i></a><i>)</i></li>
+              <li>header.php <i>(</i><a href="http://codex.wordpress.org/Function_Reference/get_header"><i>get_header()</i></a><i>経由)</i></li>
+              <li>footer.php <i>(</i><a href="http://codex.wordpress.org/Function_Reference/get_footer"><i>get_footer()</i></a><i>経由)</i></li>
+              <li>sidebar.php <i>(</i><a href="http://codex.wordpress.org/Function_Reference/get_sidebar"><i>get_sidebar()</i></a><i>経由)</i></li>
+              <li><i>comments.php <i>(</i><a href="http://codex.wordpress.org/Function_Reference/comments_template"><i>comments_template()</i></a><i>経由)</i></i></li>
+              <li>searchform.php <i>(via </i><a href="http://codex.wordpress.org/Function_Reference/get_search_form"><i>get_search_form()</i></a><i>経由)</i></li>
             </ul>
           </li>
-          <li>If you include your own theme template file, include documentation as to what it refers to.</li>
+          <li>オリジナルのテンプレートファイルを含める場合には、何をするファイルなのかドキュメントをします。</li>
         </ul>
-        <h2>Template Tags</h2>
+        <h2>テンプレートタグ</h2>
         <ul>
-          <li>Themes may modify output via function parameter (body_class( $class )/post_class( $class ))</li>
-          <li>Themes can modify output via filter (body_class/post_class)</li>
-          <li>If you use the relevant templates your theme should include:
+          <li>テーマは、関数の引数を使って出力を変更することができます。(body_class( $class )/post_class( $class ))</li>
+          <li>テーマは、フィルターを使って出力を変更することができます。(body_class/post_class)</li>
+          <li>対応するテンプレートを使う場合、以下を含める必要があります。
           <ul>
             <li><a href="http://codex.wordpress.org/Function_Reference/wp_title">wp_title()</a></li>
-            <li><a href="http://codex.wordpress.org/Function_Reference/wp_head">wp_head()</a> – (immediately before &lt;/head&gt;)</li>
-            <li><a href="http://codex.wordpress.org/Template_Tags/body_class">body_class()</a> – (inside &lt;body&gt; tag)</li>
+            <li><a href="http://codex.wordpress.org/Function_Reference/wp_head">wp_head()</a> – (&lt;/head&gt;の直前)</li>
+            <li><a href="http://codex.wordpress.org/Template_Tags/body_class">body_class()</a> – (&lt;body&gt;タグに入れる)</li>
             <li>$content_width</li>
             <li><a href="http://codex.wordpress.org/Template_Tags/post_class">post_class()</a></li>
             <li><a href="http://codex.wordpress.org/Function_Reference/wp_link_pages">wp_link_pages()</a></li>
-            <li><a href="http://codex.wordpress.org/Function_Reference/paginate_comments_links">paginate_comments_links()</a>, or <a href="http://codex.wordpress.org/Function_Reference/previous_comments_link">previous_comments_link()</a>/<a href="http://codex.wordpress.org/Function_Reference/next_comments_link">next_comments_link()</a></li>
-            <li><a href="http://codex.wordpress.org/Function_Reference/posts_nav_link">posts_nav_link()</a>, or <a href="http://codex.wordpress.org/Function_Reference/previous_posts_link">previous_posts_link()</a>/<a href="http://codex.wordpress.org/Function_Reference/next_posts_link">next_posts_link()</a>, or <a href="http://codex.wordpress.org/Function_Reference/paginate_links">paginate_links()</a></li>
-            <li><a href="http://codex.wordpress.org/Function_Reference/wp_footer">wp_footer()</a> – (immediately before &lt;/body&gt;)</li>
+            <li><a href="http://codex.wordpress.org/Function_Reference/paginate_comments_links">paginate_comments_links()</a>, または <a href="http://codex.wordpress.org/Function_Reference/previous_comments_link">previous_comments_link()</a>/<a href="http://codex.wordpress.org/Function_Reference/next_comments_link">next_comments_link()</a></li>
+            <li><a href="http://codex.wordpress.org/Function_Reference/posts_nav_link">posts_nav_link()</a>, または <a href="http://codex.wordpress.org/Function_Reference/previous_posts_link">previous_posts_link()</a>/<a href="http://codex.wordpress.org/Function_Reference/next_posts_link">next_posts_link()</a>, または <a href="http://codex.wordpress.org/Function_Reference/paginate_links">paginate_links()</a></li>
+            <li><a href="http://codex.wordpress.org/Function_Reference/wp_footer">wp_footer()</a> – (&lt;/body&gt;の直前)</li>
           </ul>
         </li>
       </ul>
     </article>
     <nav id="pagination">
-     <a href="stepnine.html" class="button right">Next step: Let's do a review!</a>
+     <a href="stepnine.html" class="button right">次のステップ： レビューしてみよう！</a>
     </nav>
   </main>
   <footer id="colophon" class="site-footer" role="contentinfo">

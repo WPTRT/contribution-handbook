@@ -1,44 +1,43 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" class="">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>コントリビューションパック: テーマレビューチーム</title>
+  <title>Contribution Pack: Theme Review Team</title>
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body id="pack" class="normal">
   <header id="top-bar">
-    <h1>テーマレビュー</h1>
+    <h1>Theme Review</h1>
   </header>
   <main id="main" class="site-main" role="main">
     <article id="process" class="content-wrapper">
-      <h1>テーマレビューの進めかた</h1>
-      <p>
-        WordPress.org のレポジトリに応募されている全てのテーマは、この過程を通ります:
+      <h1>テーマレビューの流れ</h1>
+      <p>WordPress.orgのレポジトリに掲載されるテーマは、すべて以下のプロセスを経ます。
         <ol>
-          <li>テーマを<a href="https://wordpress.org/themes/upload/">アップロードする</a>。</li>
-          <li><a href="https://themes.trac.wordpress.org/query?priority=new+theme&amp;status=new&amp;priority=previously+reviewed&amp;keywords=!~buddypress&amp;col=id&amp;col=summary&amp;col=status&amp;col=time&amp;col=changetime&amp;col=reporter&amp;report=2&amp;order=time">新しいテーマの順番待ち</a>に加わる。</li>
-          <li>テーマに、テーマレビュワーが割り当てられる。</li>
-          <li>テーマレビュワーは、<a title="Required" href="http://make.wordpress.org/themes/handbook/review/required/">必須のもの</a>、<a title="Recommended" href="http://make.wordpress.org/themes/handbook/review/recommended/">推奨されるもの</a>を確認しながらレビューを行います。</li>
-          <li>レビューが終わったら、テーマチケットにレビュー内容を追加します。</li>
-          <li>コミッターがチケットを確認します。</li>
-          <li>もし必須のものが含まれていなかった場合、テーマは承認されず、チケットはオープンになったまま、更新をまって残されます。</li>
-          <li>テーマのチケットが、テーマ作者によって７日間更新されなかったら、活動なしとみなしてクローズされます。</li>
-          <li>テーマチケットがレビュワーに７日間放置された場合は、他のレビュワーに割り当てられます。</li>
-          <li>テーマが全ての必須チェックを通過したら、掲載にむけて承認されます。</li>
-          <li>テーマが承認されたら、コミッターがチケットをレビューして、掲載します。Once a theme is approved to go live one of the committers will review the ticket and make it live.</li>
-          <li>レビュー中に問題が見つかった場合は、チケットにそのことが掲載され、テーマ作者とレビュワーが確認するようたずねられます。</li>
-          <li>チケットが有効になると、WordPress.org レポジトリに掲載され、それ以降に行われた更新はすべて<a href="https://themes.trac.wordpress.org/query?priority=theme+update&amp;status=new&amp;status=reopened&amp;keywords=!~buddypress&amp;col=id&amp;col=summary&amp;col=priority&amp;col=status&amp;col=reporter&amp;col=owner&amp;col=time&amp;col=changetime&amp;report=1&amp;order=time">アップデート待ち</a>で取り扱われます。</li>
+          <li>テーマが<a href="https://wordpress.org/themes/upload/">アップロードされます</a>。</li>
+          <li>テーマが<a href="https://themes.trac.wordpress.org/query?priority=new+theme&amp;status=new&amp;priority=previously+reviewed&amp;keywords=!~buddypress&amp;col=id&amp;col=summary&amp;col=status&amp;col=time&amp;col=changetime&amp;col=reporter&amp;report=2&amp;order=time">新しいテーマのqueue（列）</a>に掲載されます。</li>
+          <li>テーマレビュアーが割り当てられます。</li>
+          <li>レビュアーは、<a title="Required" href="http://make.wordpress.org/themes/handbook/review/required/">required items（必須項目）</a>を確認し、 <a title="Recommended" href="http://make.wordpress.org/themes/handbook/review/recommended/">recommendations（推奨内容）</a>を付記して、レビューを行います。</li>
+          <li>レビュー結果はテーマのチケットに記載されます。</li>
+          <li>コミッターがそのチケットをレビューします。A committer reviews that ticket.</li>
+          <li>すべてのrequired items（必須項目）が満たされていない場合、テーマは承認(approved)されず、アップデートのためにオープン(open)のままにしておきます。</li>
+          <li>7日間、テーマ作者からの更新がない場合には、inactivityを理由にチケットはクローズされます。</li>
+          <li>7日間、テーマレビュアーからの更新がない場合には、別のレビュアーにチケットが割り当てられます。</li>
+          <li>すべての必須項目のチェックをパスすると、liveになることが承認(approved)されます。</li>
+          <li>テーマが承認されると、コミッターがチケットのレビューを行い、テーマをliveにします。</li>
+          <li>テーマレビュー中に課題(issues)が見つかった際、チケットにそのことを記載し、テーマ作者とレビュアーは（訳者注：チケットをオープンにしたまま）レビュープロセスを続けます。</li>
+          <li>チケットがliveとなると、テーマは WordPress.org のレポジトリに掲載されます。それ以後、テーマのアップデートはすべて、<a href="https://themes.trac.wordpress.org/query?priority=theme+update&amp;status=new&amp;status=reopened&amp;keywords=!~buddypress&amp;col=id&amp;col=summary&amp;col=priority&amp;col=status&amp;col=reporter&amp;col=owner&amp;col=time&amp;col=changetime&amp;report=1&amp;order=time">アップデートの queue（列）</a>で行われます。</li>
         </ol>
       </p>
     </article>
 
      <article id="time" class="content-wrapper">
-      <h1>テーマレビューの回数</h1>
-      <p>割り当てられたチケットについて、７日間テーマ作者からもレビュワーからも反応がなかった場合、クローズされるか、別のレビュワーに再度割り当てが行われます。もし、少しの間作業できないのなら、そのことを伝えるだけでもいいので、コミュニケーションを続けることが大切です。
+      <h1>Theme Review Times</h1>
+      <p>割り当てられたチケットに対して、7日間にわたり、テーマ作者からの反応がない場合にはクローズされ、レビュアーからの反応がない場合には別のレビュアーが割り当てられます。数日間レビューができません、といったような更新であってもよいので、コミュニケーションを大切にしましょう。
       </p>
     </article>
     <nav id="pagination">
-      <a href="stepfive.html" class="button right">次のステップ: テストレビュー</a>
+      <a href="stepfive.html" class="button right">次のステップ： テストレビュー</a>
     </nav>
 
   </main>
